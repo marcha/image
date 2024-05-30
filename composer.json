@@ -1,7 +1,7 @@
 {
     "name": "marcha/image",
-    "description": "A forked Laravel 4 to 5.1. package to aid generating automatically resized images on the fly and generating responsive images.",
-    "keywords":["laravel 5.1", "laravel", "laravel 4", "imagecow", "image", "responsive", "resize"],
+    "description": "A forked Laravel 4 to 11. package to aid generating automatically resized images on the fly and generating responsive images.",
+    "keywords":["laravel", "imagecow", "image", "responsive", "resize"],
     "authors": [
         {
             "name": "Kevin Baldwyn",
