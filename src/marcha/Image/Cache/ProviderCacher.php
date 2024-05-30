@@ -1,7 +1,9 @@
-<?php namespace KevBaldwyn\Image\Cache;
+<?php 
 
-use KevBaldwyn\Image\Providers\ProviderInterface;
-use KevBaldwyn\Image\Image;
+namespace marcha\Image\Cache;
+
+use marcha\Image\Providers\ProviderInterface;
+use marcha\Image\Image;
 
 class ProviderCacher implements CacherInterface {
 

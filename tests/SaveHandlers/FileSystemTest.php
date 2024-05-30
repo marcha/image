@@ -1,7 +1,7 @@
 <?php
 
-use \KevBaldwyn\Image\SaveHandlers\FileSystem;
-use \KevBaldwyn\Image\Providers\ProviderInterface;
+use \marcha\Image\SaveHandlers\FileSystem;
+use \marcha\Image\Providers\ProviderInterface;
 use \Mockery as m;
 
 class FileSystemTest extends \PHPUnit_Framework_TestCase {
@@ -14,7 +14,7 @@ class FileSystemTest extends \PHPUnit_Framework_TestCase {
 			'mime' => 'image/jpeg',
 			'data' => file_get_contents($basePath . 'assets/image.jpg')
 		);
-		$provider = m::mock('\KevBaldwyn\Image\Providers\ProviderInterface');
+		$provider = m::mock('\marcha\Image\Providers\ProviderInterface');
 		$provider->shouldReceive('publicPath')->andReturn($basePath);
 
 		$fileSystem = new FileSystem($provider);
@@ -31,7 +31,7 @@ class FileSystemTest extends \PHPUnit_Framework_TestCase {
 		$basePath = __DIR__ . '/../';
 		$filename = 'existingfile.jpg';
 		
-		$provider = m::mock('\KevBaldwyn\Image\Providers\ProviderInterface');
+		$provider = m::mock('\marcha\Image\Providers\ProviderInterface');
 		$provider->shouldReceive('publicPath')->andReturn($basePath);
 
 		$fileSystem = new FileSystem($provider);

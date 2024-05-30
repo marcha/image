@@ -1,4 +1,4 @@
-<?php namespace KevBaldwyn\Image\Servers;
+<?php namespace marcha\Image\Servers;
 
 interface ServerInterface {
 

@@ -1,4 +1,6 @@
-<?php namespace KevBaldwyn\Image\Providers\Laravel\Commands;
+<?php 
+
+namespace marcha\Image\Providers\Laravel\Commands;
 
 use Config;
 use Illuminate\Console\Command;
@@ -6,7 +8,7 @@ use Illuminate\Console\Command;
 class MoveAssetCommand extends Command {
 
 
-	protected $name = 'kevbaldwyn:image:moveasset';
+	protected $name = 'marcha:image:moveasset';
 	protected $description = 'Move required assets to public path';
 
 	

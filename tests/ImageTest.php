@@ -1,8 +1,8 @@
 <?php
 
-use \KevBaldwyn\Image\Image;
-use \KevBaldwyn\Image\Providers\ProviderInterface;
-use \KevBaldwyn\Image\Cache\CacherInterface;
+use \marcha\Image\Image;
+use \marcha\Image\Providers\ProviderInterface;
+use \marcha\Image\Cache\CacherInterface;
 use \Mockery as m;
 
 class ImageTest extends \PHPUnit_Framework_TestCase {
@@ -115,7 +115,7 @@ class ImageTest extends \PHPUnit_Framework_TestCase {
 
 	public static function mockProvider()
 	{
-		$provider = m::mock('\KevBaldwyn\Image\Providers\ProviderInterface');
+		$provider = m::mock('\marcha\Image\Providers\ProviderInterface');
 		$provider->shouldReceive('getVarImage')->andReturn('img');
 		$provider->shouldReceive('getVarTransform')->andReturn('transform');
 		$provider->shouldReceive('getVarResponsiveFlag')->andReturn('responsive');
@@ -131,7 +131,7 @@ class ImageTest extends \PHPUnit_Framework_TestCase {
 
 	public static function mockCacher()
 	{
-		$cacher = m::mock('\KevBaldwyn\Image\Cache\CacherInterface');
+		$cacher = m::mock('\marcha\Image\Cache\CacherInterface');
 		$cacher->shouldReceive('init');
 		return $cacher;
 	}

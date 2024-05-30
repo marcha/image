@@ -1,12 +1,14 @@
-<?php namespace KevBaldwyn\Image\Providers\Laravel;
+<?php 
+
+namespace marcha\Image\Providers\Laravel;
 
 use Config;
 use Illuminate\Support\ServiceProvider;
-use KevBaldwyn\Image\Providers\Laravel\Provider as LaravelProvider;
-use KevBaldwyn\Image\Image;
-use KevBaldwyn\Image\Providers\Laravel\Commands\MoveAssetCommand;
-use KevBaldwyn\Image\Cache\ProviderCacher;
-use KevBaldwyn\Image\SaveHandlers\FileSystem;
+use marcha\Image\Providers\Laravel\Provider as LaravelProvider;
+use marcha\Image\Image;
+use marcha\Image\Providers\Laravel\Commands\MoveAssetCommand;
+use marcha\Image\Cache\ProviderCacher;
+use marcha\Image\SaveHandlers\FileSystem;
 
 class ImageServiceProvider extends ServiceProvider {
 
@@ -35,8 +37,8 @@ class ImageServiceProvider extends ServiceProvider {
 	public function register()
 	{
 
-        // Config::package('kevbaldwyn/image', __DIR__.'/../../../../../config');
-		// config('kevbaldwyn/image', __DIR__.'/../../../../config');
+        // Config::package('marcha/image', __DIR__.'/../../../../../config');
+		// config('marcha/image', __DIR__.'/../../../../config');
 
 		$this->registerCache();
 		$this->registerImageFileSaveHandler();
@@ -49,7 +51,7 @@ class ImageServiceProvider extends ServiceProvider {
 
 	private function registerCache() {
 
-		$this->app->bind('kevbaldwyn.image.cache', function() {
+		$this->app->bind('marcha.Image.cache', function() {
             // default cache is file
             // trying to keep image cache separate from other cache
             $config = array();
@@ -66,8 +68,8 @@ class ImageServiceProvider extends ServiceProvider {
 	private function registerImageFileSaveHandler()
 	{
 		$app = $this->app;
-		$this->app->bind('kevbaldwyn.image.saveHandler', function() use ($app) {
-			return new FileSystem(new LaravelProvider($app['kevbaldwyn.image.cache']));
+		$this->app->bind('marcha.Image.saveHandler', function() use ($app) {
+			return new FileSystem(new LaravelProvider($app['marcha.Image.cache']));
 		});
 	}
 
@@ -76,12 +78,12 @@ class ImageServiceProvider extends ServiceProvider {
 
 		$app = $this->app;
 
-		$this->app->bind('kevbaldwyn.image', function() use ($app) {
-			$provider = new LaravelProvider($app['kevbaldwyn.image.cache']);
+		$this->app->bind('marcha.Image', function() use ($app) {
+			$provider = new LaravelProvider($app['marcha.Image.cache']);
 			// option 1
 			$cacher   = new ProviderCacher($provider);
 			// option 2
-			// $cacher   = new ImageFileCacher($app['kevbaldwyn.image.saveHandler']);
+			// $cacher   = new ImageFileCacher($app['marcha.Image.saveHandler']);
 			return new Image($provider,
 							 Config::get('image.cache.lifetime'),
 							 Config::get('image.route'),
@@ -93,11 +95,11 @@ class ImageServiceProvider extends ServiceProvider {
 
 	private function registerCommands() {
 
-		$this->app['command.kevbaldwyn.image.moveasset'] = $this->app->share(function($app) {
+		$this->app['command.marcha.Image.moveasset'] = $this->app->share(function($app) {
 			return new MoveAssetCommand();
 		});
 
-		$this->commands('command.kevbaldwyn.image.moveasset');
+		$this->commands('command.marcha.Image.moveasset');
 	}
 
 
@@ -108,7 +110,7 @@ class ImageServiceProvider extends ServiceProvider {
 	 */
 	public function provides()
 	{
-		return array('kevbaldwyn.image');
+		return array('marcha.Image');
 	}
 
 }

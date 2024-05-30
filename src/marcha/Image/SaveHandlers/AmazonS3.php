@@ -1,10 +1,10 @@
-<?php namespace KevBaldwyn\Image\SaveHandlers;
+<?php namespace marcha\Image\SaveHandlers;
 
 use Aws\S3\S3Client;
 use Aws\S3\Exception\S3Exception;
 use Guzzle\Http\EntityBody;
-use KevBaldwyn\Image\Image;
-use KevBaldwyn\Image\Providers\ProviderInterface;
+use marcha\Image\Image;
+use marcha\Image\Providers\ProviderInterface;
 
 class AmazonS3 implements SaveHandlerInterface {
 

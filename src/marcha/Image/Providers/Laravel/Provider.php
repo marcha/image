@@ -1,6 +1,6 @@
-<?php namespace KevBaldwyn\Image\Providers\Laravel;
+<?php namespace marcha\Image\Providers\Laravel;
 
-use KevBaldwyn\Image\Providers\ProviderInterface;
+use marcha\Image\Providers\ProviderInterface;
 use Config;
 use Illuminate\Cache\CacheManager;
 use Event;

@@ -1,8 +1,10 @@
-<?php namespace KevBaldwyn\Image\Cache;
+<?php 
 
-use KevBaldwyn\Image\SaveHandlers\SaveHandlerInterface;
-use KevBaldwyn\Image\Image;
-use KevBaldwyn\Image\Servers\ImageDataException;
+namespace marcha\Image\Cache;
+
+use marcha\Image\SaveHandlers\SaveHandlerInterface;
+use marcha\Image\Image;
+use marcha\Image\Servers\ImageDataException;
 
 class ImageFileCacher implements CacherInterface {
 

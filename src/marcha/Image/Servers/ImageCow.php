@@ -1,6 +1,6 @@
-<?php namespace KevBaldwyn\Image\Servers;
+<?php namespace marcha\Image\Servers;
 
-use KevBaldwyn\Image\Cache\CacherInterface;
+use marcha\Image\Cache\CacherInterface;
 
 /**
  * ImageCow Server

@@ -25,7 +25,7 @@ Install as any other Laravel 4 package:
 
 	    ...
 
-	    'KevBaldwyn\Image\Providers\Laravel\ImageServiceProvider'
+	    'marcha\Image\Providers\Laravel\ImageServiceProvider'
 	)
 
 4) Add to the facades array in app.php:
@@ -34,7 +34,7 @@ Install as any other Laravel 4 package:
 
 	    ...
 
-	    'Image' => 'KevBaldwyn\Image\Providers\Laravel\Facades\Image'
+	    'Image' => 'marcha\Image\Providers\Laravel\Facades\Image'
 	)
 
 5) Publish the package config file to change the defaults:

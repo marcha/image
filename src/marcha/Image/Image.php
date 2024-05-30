@@ -1,9 +1,9 @@
-<?php namespace KevBaldwyn\Image;
+<?php namespace marcha\Image;
 
-use KevBaldwyn\Image\Providers\ProviderInterface;
-use KevBaldwyn\Image\Servers\Cache as CacheServer;
-use KevBaldwyn\Image\Cache\CacherInterface;
-use KevBaldwyn\Image\Servers\ImageCow as ImageCowServer;
+use marcha\Image\Providers\ProviderInterface;
+use marcha\Image\Servers\Cache as CacheServer;
+use marcha\Image\Cache\CacherInterface;
+use marcha\Image\Servers\ImageCow as ImageCowServer;
 use Imagecow\Image as ImageCow;
 use Closure;
 
@@ -24,7 +24,7 @@ class Image {
 	/**
 	 * some constants for strings used internally
 	 */
-	const EVENT_ON_CREATED = 'kevbaldwyn.image.created';
+	const EVENT_ON_CREATED = 'marcha.Image.created';
 	const CALLBACK_MODIFY_IMG_PATH = 'callback.modifyImgPath';
 
 
@@ -174,7 +174,7 @@ class Image {
 	/**
 	 * get the correctly instaniated server image in play
 	 * takes into account cache and configured options
-	 * @return KevBaldwyn\Image\Servers\ServerInterface
+	 * @return marcha\Image\Servers\ServerInterface
 	 */
 	private function getServer()
 	{

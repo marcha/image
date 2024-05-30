@@ -1,7 +1,7 @@
-<?php namespace KevBaldwyn\Image\SaveHandlers;
+<?php namespace marcha\Image\SaveHandlers;
 
-use KevBaldwyn\Image\Image;
-use KevBaldwyn\Image\Providers\ProviderInterface;
+use marcha\Image\Image;
+use marcha\Image\Providers\ProviderInterface;
 
 class FileSystem implements SaveHandlerInterface {
 

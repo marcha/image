@@ -1,13 +1,13 @@
 <?php
 
-use \KevBaldwyn\Image\Cache\ImageFileCacher;
+use \marcha\Image\Cache\ImageFileCacher;
 use \Mockery as m;
 
 class ImageFileCacherTest extends \PHPUnit_Framework_TestCase {
 
 	public function testCreateFileName()
 	{
-		$saveHandler = m::mock('\KevBaldwyn\Image\SaveHandlers\SaveHandlerInterface');
+		$saveHandler = m::mock('\marcha\Image\SaveHandlers\SaveHandlerInterface');
 		$saveHandler->shouldReceive('setPaths');
 		$operations = 'resizeCrop,400,200,center,middle';
 		

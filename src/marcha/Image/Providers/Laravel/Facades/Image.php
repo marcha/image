@@ -1,4 +1,6 @@
-<?php namespace KevBaldwyn\Image\Providers\Laravel\Facades;
+<?php 
+
+namespace marcha\Image\Providers\Laravel\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
@@ -11,7 +13,7 @@ class Image extends Facade {
 	 */
 	protected static function getFacadeAccessor()
 	{
-		return 'kevbaldwyn.image';
+		return 'marcha.Image';
 	}
 
 }

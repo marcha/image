@@ -1,4 +1,4 @@
-<?php namespace KevBaldwyn\Image\Providers;
+<?php namespace marcha\Image\Providers;
 
 interface ProviderInterface {
 
