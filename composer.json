@@ -31,6 +31,5 @@
         "psr-0": {
             "marcha\\Image": "src/"
         }
-    },
-    "minimum-stability": "dev"
+    }
 }
