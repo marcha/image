@@ -19,13 +19,10 @@
     "require": {
         "php": ">=5.3.0",
         "imagecow/imagecow": "dev-master",
-        "aws/aws-sdk-php": "^2.8"
+        "aws/aws-sdk-php": "2.8"
     },
     "require-dev" : {
       
-    },
-    "suggest": {
-        "illuminate/support" : "If using this package with Laravel > 4, you will need to install Illuminate Support. If Laravel is already installed this will already be available."
     },
     "autoload": {
         "psr-0": {
