@@ -95,10 +95,12 @@ class ImageServiceProvider extends ServiceProvider {
 
 	private function registerCommands() {
 
-		$this->app['command.marcha.Image.moveasset'] = $this->app->share(function($app) {
+		// $this->app['command.marcha.Image.moveasset'] = $this->app->share(function($app) {
+		// 	return new MoveAssetCommand();
+		// });
+		$this->app->singleton('command.marcha.Image.moveasset', function ($app) {
 			return new MoveAssetCommand();
-		});
-
+	   });
 		$this->commands('command.marcha.Image.moveasset');
 	}
 
