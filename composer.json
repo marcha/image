@@ -19,7 +19,7 @@
     "require": {
         "php": ">=5.3.0",
         "imagecow/imagecow": "1.5",
-        "aws/aws-sdk-php": "2.8"
+        "aws/aws-sdk-php-laravel": "~3.0"
     },
     "require-dev" : {
       
